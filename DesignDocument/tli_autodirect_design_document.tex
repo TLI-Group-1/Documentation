@@ -151,6 +151,24 @@ Another design pattern that we are using is the Private Class Data design patter
 \subsubsection*{3. Facade}
 We use the Facade design pattern in the main entry class of our backend, \code{ApiEndpoints}. \code{ApiEndpoints} delegates all operations to classes in the \code{services} package (which is a hallmark of the Facade design pattern). The only responsibility of the \code{ApiEndpoints} class is to send and recieve data to and from the frontend, This is done by the Spring web-framework (and so there is no code related to this inside the methods, only delegation).
 
+\section*{Accessibility Report}
+\subsubsection*{Principles of Universal Design}
+\begin{itemize}
+    \item Equitable Use: We have a picture element in our GUI to allow the user to use a picture to speech feature in the operating system. We could incorporate a way for the user to customize our website so that they would be able to interact with our program in the way that is easiest for them. This can be done by including an option to change the appearance of the website (dark mode, high contrast mode...etc). We could also include a way for the user to interact with our website using a microphone. This can be incorporated in our search feature to allow the user to verbally search for the car specifications they want.
+    \item Flexibility in Use: Our website runs on all operating systems and web browsers.Our visual elements are located in accessible parts on the screen that allow users to easily access them, either on a large or small screen. We also included a save and load feature to allow users to minimize effort between switching devices.
+    \item Simple and Intuitive Use: We can implement a feature where the user receives a message saying, "Search out of range", if the monthly budget or down payment the user inputted is too high or too low. We could also arrange car information based on the importance of it.
+    \item Perceptible Information: We use pictorial methods to show essential information. We provide a contrast between essential information and it's surroundings. We should include a small description of what our website is and what it is used for.
+    \item Tolerance for Error: We can include a pop up screen in our website that says, "Are you sure you want to claim this offer?". This is to prevent the user from accidentally claim an offer they do not want. We can also have more area around our interactive features to allow the user some leeway for clicking or tapping options.
+    \item Low Physical Effort: We have strategically aligned our interactive features in accessible parts of the screen to allow phone-users to choose options with minimal effort. We also included the save and load feature to allow the user to save their website in the state where they left it so that they do not have to re-input their information or car choices.
+    \item Size and Space for Approach and Use: We have high contrast colours so that users can see the information clearly. All text is an appropriate size so that users can clearly see text. Our website allows users to zoom in to see information that they might not be able to see clearly otherwise. We also position objects on the screen so that they are directly in the user's line of sight.
+\end{itemize}
+
+\subsubsection*{Target Audience}
+
+We could like to market our program to banks. The bank would buy our program then incorporate it in their own website, similar to how the program canvas works. The bank would allow our website to access the user's financial information and based on that information would provide appropriate loan offers for the costumer. This would help the integration of banks in the auto trade industry and to interact with their costumers directly.
+
+\subsubsection*{Who cannot use our program}
+Our program specifically caters to banks, any other categories will not be able to use it. Any one looking to buy cars can use our program through the bank; however, it only caters to that specific type of situation. If the user was in the market for any other product, they would not be able to use our program. 
 
 \section*{Use of Github Features}
 
@@ -204,7 +222,9 @@ Next, we use a relational SQL database because the structure of our data is natu
 \subsubsection*{Frontend}
 We chose to implement our frontend as a web interface because of the ease of development and cross-platform compatibility. 
 
-We are using HTML, CSS, and plain JavaScript at this time because our frontend is a fairly simple two-page static website, which means that it does not warrant the use of a large framework, as this will introduce additional complexity. 
+We are using HTML, CSS, and plain JavaScript at this time because our frontend is a fairly simple two-page static website, which means that it does not warrant the use of a large framework, as this will introduce additional complexity. We used Mustache.js as a templating engine, because it helps simplify our code, and is very lightweight itself.
+
+\newpage
 
 \section*{Testing}
 We have a lane which is specific to testing in our Github KANBAN board (``Reviewing/Testing''). We implemented multiple unit tests. Our testing was mainly focused on the services, upstream and database methods. This is to test the functionality of each of our methods and to make sure that they are working properly. Most methods were tested in a multitude of ways in order to test them thoroughly.
